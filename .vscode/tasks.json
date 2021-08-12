@@ -1,0 +1,40 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "init submodules",
+            "type": "shell",
+            "command": "git submodule update --init",
+            "problemMatcher": []
+        },
+        {
+            "label": "make defconfig",
+            "type": "shell",
+            "command": "make orangepi_zero_defconfig",
+            "options": {
+                "cwd": "${workspaceFolder}/buildroot"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "make menuconfig",
+            "type": "shell",
+            "command": "make menuconfig",
+            "options": {
+                "cwd": "${workspaceFolder}/buildroot"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/buildroot"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
