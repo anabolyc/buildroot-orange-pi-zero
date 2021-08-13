@@ -32,6 +32,17 @@
             "type": "shell",
             "command": "make",
             "options": {
+                "cwd": "${workspaceFolder}/buildroot",
+                "env": {
+                    "BR2_ROOTFS_USERS_TABLES": "${workspaceFolder}/orangepi-zero/usertable"}
+                },
+            "problemMatcher": []
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "make clean",
+            "options": {
                 "cwd": "${workspaceFolder}/buildroot"
             },
             "problemMatcher": []
